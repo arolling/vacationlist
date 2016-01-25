@@ -26,7 +26,7 @@ $(document).ready(function() {
 
     var newVacation = new Vacation(inputtedCity, inputtedCountry, inputtedSeason, inputtedDuration, inputtedHighlights);
     console.log(newVacation);
-    $("ul#places").append('<li><span class="place">' + newVacation.placeName() + '</span></li>');
+    $("ul#places").append('<li><span class="place">' + newVacation.placeName() + '</span><p><span class="hideme" id="' + newVacation.city + newVacation.duration + '">Visited for </span></p> <p><span class="hideme" id="' + newVacation.city + newVacation.season + '">Recommend: </span></p></li>');
 
     $("input#new-vacation-city").val("");
     $("input#new-vacation-country").val("");
@@ -34,6 +34,14 @@ $(document).ready(function() {
     $("input#new-vacation-duration").val("");
     $("input#new-vacation-highlights").val("");
 
+    $(".place").last().click(function() {
+      $(".hideme").hide();
+      $(".hideme#" + newVacation.city + newVacation.duration).empty().append(newVacation.timeDuration());
+      $(".hideme#" + newVacation.city + newVacation.duration).show();
+      $(".hideme#" + newVacation.city + newVacation.season).empty().append(newVacation.highlights);
+      $(".hideme#" + newVacation.city + newVacation.season).show();
+
+    });
 
   });
 
