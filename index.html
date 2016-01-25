@@ -9,6 +9,57 @@
     <title>Places We've Been</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Places We've Been</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <form class="form-horizontal" id="new-vacation">
+            <div class="form-group">
+              <label for="new-vacation-city" class="col-sm-4 control-label">City:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="new-vacation-city" placeholder="City">
+              </div>
+            </div>
 
+            <div class="form-group">
+              <label for="new-vacation-country" class="col-sm-4 control-label">Country:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="new-vacation-country" placeholder="Country">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="new-vacation-season" class="col-sm-4 control-label">Season:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="new-vacation-season" placeholder="Time of Year">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="new-vacation-duration" class="col-sm-4 control-label">How Many Days:</label>
+              <div class="col-sm-8">
+                <input type="number" class="form-control" id="new-vacation-duration" placeholder=0>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="new-vacation-highlights" class="col-sm-4 control-label">Highlights:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="new-vacation-highlights" placeholder="Fun Things to Do">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default">Add</button>
+          </form>
+          <div>
+            <h3>Vacation Spots:</h3>
+            <ul id="places">
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+
+        </div><!-- OUTPUT COLUMN -->
+      </div> <!-- Main row end -->
+    </div> <!-- END MAIN BODY CONTAINER -->
   </body>
 </html>
