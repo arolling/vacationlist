@@ -11,7 +11,7 @@ This form takes user input and displays it in a user-friendly format easing acce
 
 ## Known Bugs
 
-Doesn't actually work.
+None!
 
 
 ## Technologies Used
